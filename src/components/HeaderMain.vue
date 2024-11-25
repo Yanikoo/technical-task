@@ -60,20 +60,22 @@
         </li>
       </ul>
     </nav>
-    <h2 class="header__text-2">Выберите рассылки, которые подходят именно вам</h2>
-    <div class="email_btn">
-      <input class="email_btn__input" type="email" placeholder="Электронная почта" />
-      <button class="email_btn__btn">Подписаться</button>
-    </div>
-    <div class="toggel-wrapper">
-      <ToggleButton
-        id="toggle-subscription"
-        label="Подписка на рассылки"
-        :value="toggleValue"
-        @update:value="toggleValue = $event"
-        class="toggel-wrapper__button"
-      />
-      <span class="toggel-wrapper__text">Подписаться на все рассылки</span>
+    <div class="wrapper">
+      <h2 class="header__text-2">Выберите рассылки, которые подходят именно вам</h2>
+      <div class="email_btn">
+        <input class="email_btn__input" type="email" placeholder="Электронная почта" />
+        <button class="email_btn__btn">Подписаться</button>
+      </div>
+      <div class="toggel-wrapper">
+        <ToggleButton
+          id="toggle-subscription"
+          label="Подписка на рассылки"
+          :value="toggleValue"
+          @update:value="toggleValue = $event"
+          class="toggel-wrapper__button"
+        />
+        <span class="toggel-wrapper__text">Подписаться на все рассылки</span>
+      </div>
     </div>
   </div>
 </template>
@@ -101,7 +103,6 @@ export default {
 </script>
 
 <style scoped lang="sass">
-@import '../assets/main.sass'
 
 .header
   display: flex
@@ -118,7 +119,7 @@ export default {
     font-family: 'Roboto'
     line-height: 72px
     font-size: 56px
-    font-weight: 800
+    font-weight: 800px
 
   &__navigation
     display: flex
@@ -150,33 +151,41 @@ export default {
     background-color: rgba(90, 140, 241, 1)
 
   &__text-2
+    display: flex
+    justify-content: center
     font-family: 'Roboto'
+    margin-top: 48px
     font-size: 24px
 
 .email_btn
   width: 928px
   height: 56px
   margin-top: 24px
+  margin-left: 48px
+  margin-right: 48px
   display: flex
-  justify-content: space-between
   align-items: center
+  position: relative
 
   &__btn
+    position: absolute
+    margin-right: -20px
+    right: 0px
     width: 163px
     height: 56px
-    padding: 16px 32px 16px 32px
-    gap: 8px
     border-radius: 100px
     background-color: rgba(49, 111, 238, 1)
     color: white
     cursor: pointer
 
   &__input
-    padding: 16px 32px 16px 32px
+    width: 100%
+    height: 56px
+    padding-left: 16px
     gap: 8px
     border: none
     outline: none
-    background: transparent
+    background: rgba(255, 255, 255, 1)
 
   &__btn:hover
     background-color: white
@@ -184,9 +193,15 @@ export default {
     color: rgba(49, 111, 238, 1)
     border: 1px solid rgba(49, 111, 238, 1)
 
+.wrapper
+  width: 1024px
+  background-color: rgba(245, 245, 248, 1)
+  border-radius: 16px 16px 0px 0px
+
 .toggel-wrapper
   width: 928px
   margin-top: 16px
+  margin-left: 48px
   display: flex
   align-items: center
   justify-content: flex-start
