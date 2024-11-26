@@ -174,6 +174,7 @@ export default {
     width: 163px
     height: 56px
     border-radius: 100px
+    border: none
     background-color: rgba(49, 111, 238, 1)
     color: white
     cursor: pointer

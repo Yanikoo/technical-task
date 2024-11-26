@@ -49,23 +49,23 @@ input[type='checkbox'] {
 label {
   cursor: pointer;
   text-indent: -9999px;
-  width: 36px;
-  height: 16px;
+  width: 48px;
+  height: 24px;
   background: rgba(220, 220, 220, 1);
   display: block;
-  border-radius: 8px;
+  border-radius: 100px;
   position: relative;
 }
 
 label:after {
   content: '';
   position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 12px;
-  height: 12px;
+  top: 1px;
+  left: 1.5px;
+  width: 22px;
+  height: 22px;
   background: #fff;
-  border-radius: 50px;
+  border-radius: 100px;
   transition: 0.3s;
 }
 
@@ -74,11 +74,11 @@ input:checked + label {
 }
 
 input:checked + label:after {
-  left: calc(100% - 2px);
+  left: calc(100% - 1.5px);
   transform: translateX(-100%);
 }
 
 label:active:after {
-  width: 16px;
+  width: 22px;
 }
 </style>
