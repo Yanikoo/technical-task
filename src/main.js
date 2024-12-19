@@ -1,9 +1,8 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
 import './assets/main.sass'
 
-Vue.config.productionTip = false
+const app = createApp(App)
 
-new Vue({
-  render: (h) => h(App)
-}).$mount('#app')
+app.config.productionTip = false
+app.mount('#app')
