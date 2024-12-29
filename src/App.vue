@@ -13,12 +13,12 @@ export default {
   name: 'App',
   components: {
     HeaderMain,
-    AppMain
-  }
+    AppMain,
+  },
 }
 </script>
 
 <style lang="sass">
-@import '@/assets/main.sass'
-@import '@/assets/variables.sass'
+@forward './assets/main.sass'
+@forward './assets/variables.sass'
 </style>
